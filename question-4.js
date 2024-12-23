@@ -1,5 +1,20 @@
 function sortProductsByPrice(products) {
   // Your code here
+  let n = products.length; 
+  for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - 1 - i; j++) {
+          if (products[j].price > products[j + 1].price) {
+              let memeryValue = products[j];
+              console.log("\nmemeryValue:",memeryValue);
+              products[j] = products[j + 1];
+              console.log("\nเจ:",products[j]);  
+              products[j + 1] = memeryValue;
+              console.log("\nไอ+1:",products[j + 1]);
+              //ฉลาดจัดไอแบงค์เอ๊ยยยย
+          }
+      }
+  }
+  return products; 
 }
 
 // Test case
